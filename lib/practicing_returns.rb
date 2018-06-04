@@ -3,9 +3,10 @@ require 'pry'
 def hello(array)
   i = 0
   while i < array.length
-    yield(array[i])
+    array << yield(array[i])
     i += 1
   end
+  array
 end
 
 
